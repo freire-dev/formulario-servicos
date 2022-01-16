@@ -1,0 +1,136 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-image: linear-gradient(to right, #0051CE, #001b42);
+    overflow-x: hidden;
+}
+
+footer{
+    padding: 20px 23px;
+    background: white;
+    color: #0051CE;
+    margin-top: 700px;
+    text-align: center;
+}
+
+.home{
+    background: url(banner.png) no-repeat center;
+    color: white;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.home h1,p{
+    transform: translate(20%, 80px)
+}
+
+.home h1 span{
+    color: blue;
+    font-size: 30px;
+}
+
+.box{
+    /* Centralizando no meio*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    width: 40%;
+    margin-top: 30%;
+}
+
+.inputBox{
+    position: relative;
+}
+
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none; /* Tirando a marcação */
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+}
+
+.labelInput, ion-icon{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none; /* Qualquer lugar clicado, ele vai executar a ação */
+    transition: .5s;
+}
+
+.labelInput{
+    transform: translate(20px, 0px);
+}
+
+.inputUser:valid ~ ion-icon,
+.inputUser:focus ~ ion-icon{
+    top: -20px;
+    font-size: 14px;
+    color: white;
+}
+
+.inputUser:focus ~ .labelInput, /* Irá executar uma ação no Label quando clicar no Input */
+.inputUser:valid ~ .labelInput{ /* Irá manter a ação quando sair do input*/ 
+    transform: translate(20px, -20px);
+    font-size: 14px;
+    color: grey;
+}
+
+.box fieldset{
+    border: 3px solid blue;
+}
+
+.box legend{
+    border: 2px solid blue;
+    padding: 8px;
+    text-align: center;
+    background-color: blue;
+    border-radius: 7px;
+}
+
+#data-nascimento{
+    border: none;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    transform: translate(-5px,5px);
+    width:100%;
+    outline: none;
+}
+
+.btn #submit{
+    background-image: linear-gradient(to right, #0051CE, #001b42);
+    width:50%;
+    transform: translate(50%,-5px);
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+#submit:hover{
+    background-image: linear-gradient(to right, #0544a3, #000914);
+    color: white;
+}
+
+#mensagem{
+    border: 1px solid white;
+    padding-bottom: 100px;
+}
+
+#mensagem-label{
+    top: -20px;
+}
